@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+=======
+<!-- app/views/items/show.html.erb -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <% if @item.image_url.present? %>
+        <img src="<%= @item.image_url %>" class="img-fluid rounded shadow-sm" alt="<%= @item.title %>">
+      <% else %>
+        <img src="placeholder.jpg" class="img-fluid rounded shadow-sm" alt="Placeholder Image">
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <h1 class="mb-4"><%= @item.title %></h1>
+      <p class="lead"><%= @item.description %></p>
+      <p class="h4 text-success"><%= number_to_currency(@item.price) %></p>
+      <div class="mt-4">
+        <p>
+          <strong>Créé le:</strong>
+          <%= @item.created_at.strftime("%B %d, %Y %H:%M") %>
+        </p>
+        <p>
+          <strong>Mis à jour le:</strong>
+          <%= @item.updated_at.strftime("%B %d, %Y %H:%M") %>
+        </p>
+      </div>
+      <a href="<%= items_path %>" class="btn btn-secondary mt-3">Retour à la liste</a>
+    </div>
+  </div>
+</div>
+>>>>>>> 6a4bd5bf4ff8cb9f426f002ac285204bb3791cc5
